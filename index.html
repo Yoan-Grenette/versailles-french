@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>👑 Château de Versailles 👑</title>
+		<meta name="description" content="The Palace of Versailles.">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="components/style.css">
+		<script src="https://kit.fontawesome.com/23761ed93b.js" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	<body>
+		<div class="band" id="band">
+			<a href="#band"><img src="images/lys.jpg" id="img-lys"></a>
+			<a href="#band"><h1>Château de Versailles</h1></a>
+			<div id="language">
+				<i class="fas fa-globe"></i> ⇢
+				<a href="https://yoan-grenette.github.io/versailles-french/" id="fr"> Français </a> ⎮
+				<a href="https://yoan-grenette.github.io/versailles-english/" id="eng"> English </a>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="container">
+				<h1>Château de Versailles</h1>
+				<h2>Le plus grand château d'Europe.</h2>
+				<a href="#decouvrir-section"><button class="btn-l"><span>Découvrir </span></button></a>
+				<a href="#formulaire"><button class="btn-r"><span>Réserver </span></button></a>
+			</div>
+		</div>
+		<div id="decouvrir-section">
+			<div class="types">
+				<div class="chateau">
+					<a href="#diapo"><img src="images/chateau.jpg" class="types-img"></a>
+					<div class="overlay">Le château</div>
+				</div>
+				<div class="jardins">
+					<a href="#diapo"><img src="images/jardins.jpg" class="types-img"></a>
+					<div class="overlay">Les jardins</div>
+				</div>
+				<div class="fontaines">
+					<a href="#diapo"><img src="images/fontaines.jpg" class="types-img"></a>
+					<div class="overlay">Les fontaines</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slideshow-container" id="diapo">
+			<div class="mySlides fade">
+  				<div class="numbertext">1 / 3</div>
+  				<img src="images/chateau1.jpg" style="width:100%">
+ 				<div class="text">Superficie du château : 8,2 km^2.</div>
+			</div>
+
+			<div class="mySlides fade">
+  				<div class="numbertext">2 / 3</div>
+  				<img src="images/chateau2.jpg" style="width:100%">
+ 				<div class="text">Superficie des jardins : 830 ha.</div>
+			</div>
+
+			<div class="mySlides fade">
+  				<div class="numbertext">3 / 3</div>
+  				<img src="images/chateau3.jpg" style="width:100%">
+  				<div class="text">Cours d'eau : 620.</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+		<div style="text-align:center">
+  			<span class="dot" onclick="currentSlide(1)"></span> 
+  			<span class="dot" onclick="currentSlide(2)"></span> 
+  			<span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+  			var i;
+  			var slides = document.getElementsByClassName("mySlides");
+  			var dots = document.getElementsByClassName("dot");
+  			if (n > slides.length) {slideIndex = 1}    
+  			if (n < 1) {slideIndex = slides.length}
+  			for (i = 0; i < slides.length; i++) {
+    			  slides[i].style.display = "none";  
+  			}
+  			for (i = 0; i < dots.length; i++) {
+   	 		  dots[i].className = dots[i].className.replace(" active", "");
+  			}
+  			slides[slideIndex-1].style.display = "block";  
+  			dots[slideIndex-1].className += " active";
+			}
+		</script>
+		<div id="formulaire">
+			<div class="typeform-widget" data-url="https://grenetteyoan.typeform.com/to/Tl2kMz" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=Tl2kMz&utm_source=typeform.com-15124615-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a>
+			</div>
+		</div>
+	</body>
+</html>
